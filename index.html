@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Email Generator</h1>
+        <form id="emailForm">
+            <div class="flex-row">
+                <div class="flex-col">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="flex-col">
+                    <label for="amountToPay">Customer Address: <span class="red-txt">(optional field)</span></label>
+                    <input type="text" id="customerAddress" name="customerAddress">
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <div class="flex-col">
+                    <label for="amountDisbursed">Amount Disbursed:</label>
+                    <input type="number" id="amountDisbursed" name="amountDisbursed" required>
+                </div>
+                <div class="flex-col">
+                    <label for="amountToPay">Amount to Pay:</label>
+                    <input type="number" id="amountToPay" name="amountToPay" required>
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <button type="button" onclick="generateEmail()">Generate Demand Notice</button>
+                <button type="button" class="btn-sec" onclick="generateFollowUpEmail()">Generate Follow Up
+                    Notice</button>
+            </div>
+        </form>
+
+        <h2>Generated Email</h2>
+        <p><strong>Subject:</strong> <span id="emailSubject"></span></p>
+        <p><strong>Body:</strong> <span id="emailBody"></span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
